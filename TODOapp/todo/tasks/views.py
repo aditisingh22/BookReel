@@ -2,12 +2,14 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import *
 from .forms import *
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 '''
 Pointer
 Needs to be done so that the new app page can show the details we are quering from the database table like here tasks contains the tasks that has been added to the table and added the value in context and further passed to the template using render
 '''
+@login_required
 def index(request):
     
     tasks = Task.objects.all()

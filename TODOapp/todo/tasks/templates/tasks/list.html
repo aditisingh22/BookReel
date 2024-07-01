@@ -49,9 +49,19 @@
 
 <div class="center-column">
 <h3>TO DO</h3>
+	<form method="post" action="{% url 'logout' %}">
+		{% csrf_token %}
+		{% if request.user.is_authenticated %}
+
+		<button class= "btn-sm btn-danger" type="submit">Logout</button>
+		{% endif %}
+	</form>
+
+
 
     <form method="POST" action="/">
         {% csrf_token %}
+		
         {{ form.title }}
         <input class="btn btn-info" type="submit" name="Create Task">
     </form>

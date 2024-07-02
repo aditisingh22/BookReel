@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-z)y5sf))4688+h(x2#wogvsho5#z_um#hi-_r3v(z7)g60rvp6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://simplydone.onrender.com']
+ALLOWED_HOSTS = ['simplydone.onrender.com']
 
-CSRF_TRUSTED_ORIGINS = ['simplydone.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://simplydone.onrender.com']
 # Application definition
     # '''
     # Pointer

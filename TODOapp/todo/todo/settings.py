@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['simplydone.onrender.com']
 
-
+CSRF_TRUSTED_ORIGINS = ['simplydone.onrender.com']
 # Application definition
     # '''
     # Pointer

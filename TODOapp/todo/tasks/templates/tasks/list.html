@@ -44,16 +44,22 @@
 		background-color: #ffae19;
 		border-color: #e59400;
 	}
+	.logout-form {
+		float: right; 
+		margin-top: 10px;
+	}
 
 </style>
-<p>Logged in as {{request.user}}</p>
-<form method="POST" action="{% url 'logout' %}">
+<div>
+
+<form method="POST" action="{% url 'logout' %}" class="logout-form">
+	<p>Logged in as {{ request.user }}</p>
 	{% csrf_token %}
 	{% if request.user.is_authenticated %}
-
-	<button class= "btn-sm btn-danger" type="submit">Logout</button>
+		<button class="btn-sm btn-danger" type="submit">Logout</button>
 	{% endif %}
 </form>
+</div>
 
 <div class="center-column">
 <h3>TO DO</h3>

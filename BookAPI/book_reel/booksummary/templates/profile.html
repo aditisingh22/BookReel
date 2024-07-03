@@ -1,0 +1,27 @@
+{% block content %}
+<h1>Profile Page</h1>
+<p>Welcome, {{ user.username }}!</p>
+<div>
+
+    <form method="POST" action="{% url 'logout' %}" class="logout-form">
+        <p>Logged in as {{ request.user }}</p>
+        {% csrf_token %}
+        {% if request.user.is_authenticated %}
+            <button class="btn-sm btn-danger" type="submit">Logout</button>
+        {% endif %}
+    </form>
+    </div>
+<form method="post">
+    {% csrf_token %}
+    <label for="book_name">Please enter the name of the book:</label>
+    <input type="text" id="book_name" name="book_name" required>
+    <button type="submit">Get Summary</button>
+</form>
+
+{% if book_summary %}
+    <h2>Book Summary:</h2>
+    <div class="book-summary">
+        {{ book_summary|linebreaks }}
+    </div>
+{% endif %}
+{% endblock %}

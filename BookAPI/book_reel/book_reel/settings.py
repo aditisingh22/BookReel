@@ -28,8 +28,8 @@ SECRET_KEY = "django-insecure-b1=w^8r3l#%^%s_ol8*fcck=0-g3zpyiokvvn-=trcq#z!3f&+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['bookreel.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://bookreel.onrender.com']
 
 # Application definition
 
